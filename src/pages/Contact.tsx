@@ -1,8 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Box, Typography, Paper, TextField, Button } from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import PageTransition from '../components/PageTransition';
 import emailjs from '@emailjs/browser';
 

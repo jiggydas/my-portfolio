@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Paper, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import PageTransition from '../components/PageTransition';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
