@@ -1,1 +1,1 @@
-I have created this Portfolio Website with the help of Cursor
+A Portfolio Website meant to showcase my skills in Web Development and Prompt Engineering.
