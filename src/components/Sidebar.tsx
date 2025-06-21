@@ -22,7 +22,7 @@ interface ExternalLink {
 }
 
 const externalLinks: ExternalLink[] = [
-  { text: 'GitHub', url: 'https://github.com/jiggydas', icon: <GitHubIcon /> },
+  { text: 'GitHub', url: 'https://github.com/jigyansoodas', icon: <GitHubIcon /> },
   { text: 'LinkedIn', url: 'https://linkedin.com/in/jigyansoo-das-85521b157', icon: <LinkedInIcon /> },
   { text: 'LeetCode', url: 'https://leetcode.com/jigyansoodas', icon: <EmojiEventsIcon /> },
 ];

@@ -1,8 +1,8 @@
 # Jigyansoo Das - Professional Portfolio
 
-[![Deploy Portfolio to GitHub Pages](https://github.com/jiggydas/my-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/jiggydas/my-portfolio/actions/workflows/deploy.yml)
+[![Deploy Portfolio to GitHub Pages](https://github.com/jigyansoodas/my-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/jigyansoodas/my-portfolio/actions/workflows/deploy.yml)
 
-Welcome to the repository for my professional portfolio website, accessible live at [jiggydas.github.io/my-portfolio](https://jiggydas.github.io/my-portfolio).
+Welcome to the repository for my professional portfolio website, accessible live at [jigyansoodas.github.io/my-portfolio](https://jigyansoodas.github.io/my-portfolio).
 
 This project is a comprehensive showcase of my skills in modern frontend development, my professional experience, and my personal projects. It was built from the ground up using React and Material-UI.
 
@@ -42,7 +42,7 @@ To run this project on your local machine:
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/jiggydas/my-portfolio.git
+    git clone https://github.com/jigyansoodas/my-portfolio.git
     ```
 2.  Navigate to the project directory:
     ```bash
