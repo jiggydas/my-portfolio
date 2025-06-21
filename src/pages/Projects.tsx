@@ -28,15 +28,12 @@ const Projects: React.FC = () => {
         <Paper 
           elevation={0} 
           sx={{ 
-            p: 4, 
+            p: { xs: 2, md: 4 }, 
             bgcolor: 'background.paper',
             borderRadius: 2,
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
           }}
         >
-          <Typography variant="h1" gutterBottom>
-            Projects
-          </Typography>
           <Box sx={{ 
             display: 'flex', 
             flexWrap: 'wrap',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Divider, Button } from '@mui/material';
+import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Divider } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
@@ -9,6 +9,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import DescriptionIcon from '@mui/icons-material/Description';
+
+interface SidebarProps {
+  drawerWidth: number;
+  mobileOpen: boolean;
+  handleDrawerToggle: () => void;
+}
 
 interface ExternalLink {
   text: string;
@@ -22,24 +28,9 @@ const externalLinks: ExternalLink[] = [
   { text: 'LeetCode', url: 'https://leetcode.com/jigyansoodas', icon: <EmojiEventsIcon /> },
 ];
 
-const Sidebar: React.FC = () => {
-  return (
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: 240,
-        flexShrink: 0,
-        '& .MuiDrawer-paper': {
-          width: 240,
-          boxSizing: 'border-box',
-          backgroundColor: '#1a1a1a',
-          borderRight: '1px solid rgba(255, 255, 255, 0.1)',
-          boxShadow: '2px 0 8px rgba(0, 0, 0, 0.2)',
-          display: 'flex',
-          flexDirection: 'column',
-        },
-      }}
-    >
+const Sidebar: React.FC<SidebarProps> = ({ drawerWidth, mobileOpen, handleDrawerToggle }) => {
+  const drawerContent = (
+    <>
       <Box sx={{ p: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
         <CodeIcon sx={{ fontSize: 28, color: '#90caf9' }} />
         <Typography variant="h6" sx={{ fontWeight: 600, color: '#e0e0e0' }}>
@@ -69,6 +60,7 @@ const Sidebar: React.FC = () => {
             <ListItem 
               component={Link} 
               to="/" 
+              onClick={handleDrawerToggle}
               sx={{ 
                 mx: 1,
                 borderRadius: '8px',
@@ -99,6 +91,7 @@ const Sidebar: React.FC = () => {
             <ListItem 
               component={Link} 
               to="/experience" 
+              onClick={handleDrawerToggle}
               sx={{ 
                 mx: 1,
                 borderRadius: '8px',
@@ -129,6 +122,7 @@ const Sidebar: React.FC = () => {
             <ListItem 
               component={Link} 
               to="/projects" 
+              onClick={handleDrawerToggle}
               sx={{ 
                 mx: 1,
                 borderRadius: '8px',
@@ -159,6 +153,7 @@ const Sidebar: React.FC = () => {
             <ListItem 
               component={Link} 
               to="/contact" 
+              onClick={handleDrawerToggle}
               sx={{ 
                 mx: 1,
                 borderRadius: '8px',
@@ -210,6 +205,7 @@ const Sidebar: React.FC = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleDrawerToggle}
                 sx={{
                   mx: 1,
                   borderRadius: '8px',
@@ -241,7 +237,52 @@ const Sidebar: React.FC = () => {
           </List>
         </Box>
       </Box>
-    </Drawer>
+    </>
+  );
+
+  return (
+    <Box
+      component="nav"
+      sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+      aria-label="mailbox folders"
+    >
+      {/* Temporary Drawer for Mobile */}
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        sx={{
+          display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': { 
+            boxSizing: 'border-box', 
+            width: drawerWidth,
+            backgroundColor: '#1a1a1a',
+            borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+          },
+        }}
+      >
+        {drawerContent}
+      </Drawer>
+      {/* Permanent Drawer for Desktop */}
+      <Drawer
+        variant="permanent"
+        sx={{
+          display: { xs: 'none', sm: 'block' },
+          '& .MuiDrawer-paper': { 
+            boxSizing: 'border-box', 
+            width: drawerWidth,
+            backgroundColor: '#1a1a1a',
+            borderRight: '1px solid rgba(255, 255, 255, 0.1)',
+          },
+        }}
+        open
+      >
+        {drawerContent}
+      </Drawer>
+    </Box>
   );
 };
 

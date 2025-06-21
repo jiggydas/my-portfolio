@@ -79,8 +79,14 @@ const Experience: React.FC = () => {
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
           }}
         >
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 4 }}>
-            <Typography variant="h4" component="h1">
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: { sm: 'flex-start' }, 
+            mb: 4,
+            flexDirection: { xs: 'column', sm: 'row' }
+          }}>
+            <Typography variant="h4" component="h1" sx={{ mb: { xs: 2, sm: 0 } }}>
               My Professional Journey &amp; Growth
             </Typography>
             <Button
