@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
     company: 'Oracle',
     period: '13 Jan 2025 - Present',
     description: [
-      "Designed and implemented View CRUDL and RBAC APIs for Oracle's Intelligent Data Lake platform, delivering specifications, backend logic and comprehensive test coverage for successful release in LA+1 milestone.",
+      "Designed and implemented CRUDL and RBAC APIs for Oracle's Intelligent Data Lake platform, delivering specifications, backend logic and comprehensive test coverage for successful release in LA+1 milestone.",
       "Implemented multi-part uploads, large-scale paginated operations, and assert-free resource cleanup to optimize performance and test reliability.",
       "Led E2E testing and deployment efforts across INTEG, DEMO, and PREPROD environments; diagnosed and resolved production issues using log analysis and system monitorin.",
       "Strengthened platform security and observability by enabling Fortify scans, SLAPS SCA container usage, and custom alarms for Intelligent Data Lake metrics.",
