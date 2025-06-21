@@ -1,1 +1,1 @@
-A Portfolio Website meant to showcase my skills in Web Development and Prompt Engineering.
+A Portfolio Website meant to showcase my skills in Web Development and Prompt Engineering, as this was completely built by pair-programming with Cursor.
