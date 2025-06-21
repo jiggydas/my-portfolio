@@ -15,9 +15,9 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Portfolio Website',
-    description: 'This portfolio was dynamically built using React and Material-UI in a unique pair-programming session with Cursor, an AI assistant. I directed the development process through strategic prompt engineering, showcasing a modern approach to both frontend development and human-AI collaboration.',
+    description: 'This portfolio was dynamically built using React and Material-UI in a unique pair-programming session with Cursor, an AI assistant. I directed the development process through strategic prompt engineering, showcasing a modern approach to both front-end development and Human-AI collaboration.',
     technologies: ['React', 'TypeScript', 'Material-UI', 'EmailJS', 'Prompt Engineering'],
-    githubUrl: 'https://github.com/jiggydas/my-portfolio',
+    githubUrl: 'https://github.com/jigyansoodas/my-portfolio',
   },
 ];
 
